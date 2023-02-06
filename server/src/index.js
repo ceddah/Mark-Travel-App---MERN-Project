@@ -18,7 +18,7 @@ mongoose.connect(process.env.DATABASE_URL, {
 
 const port = process.env.PORT || 1337;
 app.use(morgan("common"));
-app.use(helmet());
+app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 // app.use(cors({
 //   origin: process.env.CORS_ORIGIN,
 // }));
