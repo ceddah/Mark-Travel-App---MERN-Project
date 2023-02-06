@@ -25,7 +25,7 @@ app.use(helmet());
 app.use(express.json());
 app.use(cors());
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.json({ message: "Hello World" });
 });
 app.use("/api/logs", logs);
