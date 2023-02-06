@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
-import mapboxgl from "mapbox-gl";
+import mapboxgl, { clearStorage } from "mapbox-gl";
 import { listLogEntries } from "./API";
 import LogEntryForm from "./LogEntryForm";
 import "mapbox-gl/dist/mapbox-gl.css";
@@ -62,7 +62,7 @@ function App() {
       {...viewport}
       // mapStyle="mapbox://styles/thecjreynolds/ck117fnjy0ff61cnsclwimyay"
       mapStyle="mapbox://styles/mapbox/dark-v11"
-      mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+      mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
       onViewportChange={setViewport}
       onDblClick={showAddMarkerPopup}
     >
