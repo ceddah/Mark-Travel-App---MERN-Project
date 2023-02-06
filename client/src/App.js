@@ -61,10 +61,7 @@ function App() {
       {...viewport}
       // mapStyle="mapbox://styles/thecjreynolds/ck117fnjy0ff61cnsclwimyay"
       mapStyle="mapbox://styles/mapbox/dark-v11"
-      // mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-      mapboxAccessToken={
-        "pk.eyJ1IjoiY2VkZGFoIiwiYSI6ImNsZHN5MjlqZDF6d2szcHFneDJnNWRsMXYifQ.vL87sAwkhYyD4J7E-6r12Q"
-      }
+      mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
       onViewportChange={setViewport}
       onDblClick={showAddMarkerPopup}
     >
