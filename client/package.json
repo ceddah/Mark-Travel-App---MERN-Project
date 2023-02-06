@@ -10,6 +10,7 @@
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.15.2",
     "react-map-gl": "^6.1.17",
+    "mapbox-gl": "^2.12.1",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
@@ -29,7 +30,11 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "not safari < 10",
+      "not chrome < 51",
+      "not android < 5",
+      "not ie < 12"
     ],
     "development": [
       "last 1 chrome version",
