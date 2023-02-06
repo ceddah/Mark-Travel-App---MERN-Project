@@ -3,10 +3,10 @@ import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import mapboxgl from "mapbox-gl";
 import { listLogEntries } from "./API";
 import LogEntryForm from "./LogEntryForm";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
-import MapboxWorker from "worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker";
-mapboxgl.workerClass = MapboxWorker;
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 function App() {
   const [logEntries, setLogEntries] = useState([]);
