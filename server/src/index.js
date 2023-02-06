@@ -30,7 +30,7 @@ app.get("/api", (req, res) => {
 });
 app.use("/api/logs", logs);
 
-app.use(middlewares.notFound);
+// app.use(middlewares.notFound);
 
 app.use(middlewares.errorHandler);
 
